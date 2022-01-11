@@ -7,10 +7,17 @@ import { CreateTaskDto } from './dto/create-task.dto';
 export class TasksService {
   private tasks: Task[] = [];
 
+  //get all tasks
   getAllTasks(): Task[] {
     return this.tasks;
   }
 
+  //get task by id
+  getTaskById(id: string): Task {
+    return this.tasks.find((task) => task.id === id);
+  }
+
+  //craete a task
   createTask(CreateTaskDto: CreateTaskDto): Task {
     // destructuring
     const { title, description } = CreateTaskDto;
