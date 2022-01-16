@@ -32,7 +32,7 @@ export class TasksService {
     return task;
   }
 
-//get all tasks and filter it by search
+  //get all tasks and filter it by search
   getTasksWithFilters(filterDto: GetTasksFilterDto): Task[] {
     const { status, search } = filterDto;
 
